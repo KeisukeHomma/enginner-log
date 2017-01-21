@@ -118,7 +118,11 @@ h4{
 			height: 20px;
 			clear: both;
 			border: 1px solid #ccc;
+			color: $base-color;
 			@include border-radius(3px);
+		}
+		input:focus {
+    	border:solid 1px $main-color;
 		}
 		h3{
 			font-size: $px11;
