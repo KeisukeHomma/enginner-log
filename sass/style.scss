@@ -20,7 +20,7 @@ h1, h2, h3, h4, small{
 }
 
 h1{
-	font-size: $px24;
+	font-size: $px20;
 	display: block;
 	font-weight: 700;
 	margin-bottom: 20px;
@@ -30,22 +30,13 @@ h1{
 h2{
 	font-size: $px14;
 	font-weight: 700;
-	color: #005BDD;
+	color: $text-color-accent;
 }
 
 h3{
 	font-size: $px18;
 	margin-bottom: 14px;
 	text-align: center;
-}
-
-h4{
-	font-size: $px12;
-	margin-bottom: 30px;
-	text-align: center;
-	font-family: 'Lato', sans-serif;
-	color: #ccc;
-	font-weight: 300;
 }
 
 p{
@@ -74,6 +65,7 @@ nav{
 				height: 32px;
 			}
 		}
+		@include log-button-nav;
 		#user-menu{
 			width: 150px;
 			height: 62px;
@@ -86,7 +78,6 @@ nav{
 				margin: 14px 15px 0 0;
 				float: left;
 				background: {
-					image: url(../images/people/me.jpg);
 					repeat: no-repeat;
 					position: top center;
 					size: cover;
@@ -178,7 +169,7 @@ nav{
 						h2{
 							float: left;
 							span{
-								background: #0057D6;
+								background: $text-color-accent;
 								color: #fff;
 								margin: 0 8px 0 0;
 								padding: 3px 4px 3px 6px;
@@ -230,32 +221,10 @@ nav{
 			}
 		}
 		// もっと見るボタン
-		#item-button{
-			display: block;
-			margin: 30px auto 70px auto;
-			width: 200px;
-			height: 54px;
-			text-align: center;
-			text-decoration: none;
-			line-height: 54px;
-			outline: none;
-			background-color: #333;
-			color: #fff;
-			@include border-radius(3px);
-			&:hover{background-color: #59b1eb}
-			&::before, &::after{
-				position: absolute;
-				z-index: -1;
-				display: block;
-				content: '';
-			}
-		}
-		#item-button, #item-button::before, #item-button::after{
-			@include box-sizing(border-box);
-			@include transition-property(all);
-			@include transition-duration(0.2s);
-		}
+		@include more-show-button;
 	}
+	
+	
 	
 	// プロフィールとか
 	#side-container{
@@ -263,6 +232,9 @@ nav{
 		float: right;
 		border: solid 1px #ccc;
 		@include border-radius(5px);
+		a{
+			text-decoration: none;
+		}
 		.user-info-avatar{
 			width: 108px;
 			height: 108px;
@@ -280,6 +252,19 @@ nav{
 			letter-spacing: 1px;
 			text-align: center;
 			margin-bottom: 30px;
+		}
+		.user-info-log-area{
+			width: 100%;
+			border-top: solid 1px #ccc;
+			clear: both;
+			padding-top: 30px;
+			h3{
+				font-size: $px12;
+				padding: 0 10px;
+				word-wrap: break-word;
+				font-weight: 700;
+			}
+			@include log-button-user-info;
 		}
 	}
 }

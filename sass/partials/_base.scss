@@ -1,8 +1,186 @@
+@charset "UTF-8";
 $text-color: #696969;
 $base-color: #4A4A4A;
+$accent-color: #49B313;
+$accent-color-hover: #2C7209;
+$setting-log-color: #ff8c00;
+$setting-log-color-hover: #d2691e;
+$main-color: #4A92E6;
+$text-color-accent: #2e6eba;
 
 @mixin box-default{
   width: 960px;
   margin: 0 auto 130px auto;
   clear: both;
+}
+
+@mixin more-show-button{
+	#item-button{
+		display: block;
+		margin: 30px auto 70px auto;
+		width: 200px;
+		height: 54px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 54px;
+		outline: none;
+		background-color: #333;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: #59b1eb}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	#item-button, #item-button::before, #item-button::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+}
+
+@mixin log-button-nav{
+	.nav-button-log{
+		display: block;
+		float: right;
+		width: 130px;
+		height: 32px;
+		margin: 14px 12px 0 0;
+		text-align: center;
+		text-decoration: none;
+		line-height: 32px;
+		outline: none;
+		background-color: $accent-color;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: $accent-color-hover;}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	.nav-button-log, .nav-button-log::before, .nav-button-log::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+}
+
+@mixin log-button-user-info{
+	.user-info-button-log{
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 130px;
+		height: 32px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 32px;
+		outline: none;
+		background-color: $accent-color;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: $accent-color-hover}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	.user-info-button-log, .user-info-button-log::before, .user-info-button-log::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+}
+
+@mixin setting-log-button-nav{
+	.nav-button-log{
+		display: block;
+		float: right;
+		width: 130px;
+		height: 32px;
+		margin: 14px 12px 0 0;
+		text-align: center;
+		text-decoration: none;
+		line-height: 32px;
+		outline: none;
+		background-color: $setting-log-color;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: $setting-log-color-hover;}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	.nav-button-log, .nav-button-log::before, .nav-button-log::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+}
+
+@mixin setting-log-button-user-info{
+	.user-info-button-log{
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 130px;
+		height: 32px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 32px;
+		outline: none;
+		background-color: $setting-log-color;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: $setting-log-color-hover}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	.user-info-button-log, .user-info-button-log::before, .user-info-button-log::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+}
+
+// 貢献ボタン
+@mixin contribution-show-button{
+	.contribution-show-button{
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 130px;
+		height: 32px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 32px;
+		outline: none;
+		background-color: $main-color;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: $text-color-accent}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	.contribution-show-button, .contribution-show-button::before, .contribution-show-button::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
 }

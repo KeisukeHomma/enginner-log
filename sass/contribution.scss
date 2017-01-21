@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import "compass";
+@import "partials/base";
+@import "partials/ptp-12";
+
+
+/*--------------------
+　　    変更点
+---------------------*/
+nav{
+	.box-inner{
+		@include setting-log-button-nav;
+		.user-gate{
+			float: right;
+			a{
+				line-height: 62px;
+				display: block;
+				padding: 0 15px;
+				float: left;
+				color: #fff;
+				text-decoration: none;
+				width: 100px;
+				text-align: center;
+			}
+			a:hover{
+				background: #333;
+			}
+		}
+	}
+}
+
+#container{
+	#side-container{
+		.user-info-log-area{
+			@include setting-log-button-user-info;
+		}
+	}
+}
+
+//nav{
+//	.box-inner{
+//		@include setting-log-button-nav;
+//	}
+//}
+//
+//#container{
+//	#side-container{
+//		.user-info-log-area{
+//			@include setting-log-button-user-info;
+//		}
+//	}
+//}
+
+
+/*-----------------
+       追加
+-----------------*/
+h4{
+	font-size: $px14;
+	margin-bottom: 7px;
+	color: $text-color-accent;
+	font-weight: 700;
+	word-wrap: break-word;
+	line-height: 1.1;
+}
+
+#container{
+	.contribution-article{
+		width: 980px;
+		height: 220px;
+		margin: 0 auto 40px auto;
+		padding: 0;
+		border: 1px solid #ccc;
+		@include border-radius(5px);
+		background: #F3F3F3;
+		position: relative;
+		.contribution-article-img{
+			background: {
+				repeat: no-repeat;
+				position: top left;
+				size: cover;
+			}
+			width: 240px;
+			height: 220px;
+			float: left;
+			margin: 0px 20px 0px 0px;
+			border-right: solid 1px #ccc;
+			@include border-radius(5px 0 0 5px);
+		}
+		.contribution-article-info{
+			margin: 13px 0px 10px 0px;
+			overflow: visible;
+			.contribution-article-info-text{
+				width: 700px;
+				height: 210px;
+				line-height: 1.5;
+				font-size: $px12;
+				font-feature-settings: normal;
+				word-wrap: break-word;
+				float: left;
+				display: block;
+			}
+		}
+	}
+}
+
+#side-container{
+	.contribution-show{
+		width: 100%;
+		border-top: none;
+		clear: both;
+		padding-top: 25px;
+		.contribution-article-url-box{
+			margin: 0 auto 20px auto;
+			padding: 2px 5px;
+			display: block;
+			width: 180px;
+			height: 20px;
+			clear: both;
+			border: 1px solid #ccc;
+			@include border-radius(3px);
+		}
+		h3{
+			font-size: $px11;
+			padding: 0 5px;
+			word-wrap: break-word;
+			font-weight: 700;
+			line-height: 1.5;
+		}
+		@include contribution-show-button;
+	}
+}

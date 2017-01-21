@@ -86,13 +86,22 @@ h1 {
 h2 {
   font-size: 117%;
   font-weight: 700;
-  color: #2e6eba;
+  color: #005BDD;
 }
 
 h3 {
   font-size: 150%;
   margin-bottom: 14px;
   text-align: center;
+}
+
+h4 {
+  font-size: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #ccc;
+  font-weight: 300;
 }
 
 p {
@@ -172,6 +181,7 @@ nav .box-inner #user-menu #user-menu-img {
   height: 32px;
   margin: 14px 15px 0 0;
   float: left;
+  background-image: url(../images/people/me.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -255,7 +265,7 @@ nav .box-inner #user-menu:hover {
   float: left;
 }
 #container #main-container .box-item .box-item-inner .box-item-right .box-item-title h2 span {
-  background: #2e6eba;
+  background: #0057D6;
   color: #fff;
   margin: 0 8px 0 0;
   padding: 3px 4px 3px 6px;

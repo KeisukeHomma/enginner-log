@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Engineer Log</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/contribution.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 <script src="https://use.fontawesome.com/4f28f6d2c2.js"></script>
 </head>
@@ -17,20 +18,32 @@
 				<img src="images/logo.png" alt="エンジニアログのロゴ" />
 			</div>
 		</a>
-		<a href="mypage.html">
-			<div id="user-menu">
-				<div id="user-menu-img" style="background-image: url(images/people/me.jpg);"></div>
-				<p id="user-menu-name">Homma</p>
-				<div id="triangle"></div>
-			</div>
-		</a>
-		<a class="nav-button-log" href="#">学習を記録する</a>
+		<div class="user-gate">
+			<a href="signin.html">
+				<i class="fa fa-sign-in" aria-hidden="true"></i>
+				ログイン
+			</a>
+			<a href="signup.html">
+				<i class="fa fa-user-plus" aria-hidden="true"></i>
+				新規登録
+			</a>
+		</div>
 	</div>
 </nav>
 
 <div id="container">
+	<article class="contribution-article">
+		<div class="contribution-article-img" style="background-image: url(images/article/01.png)"></div>
+		<div class="contribution-article-info">
+			<h4>2016年 独りで新規WEBサービスを開発・運用した際の知見 - Qiita</h4>
+			<p class="contribution-article-info-text">
+				私が新規WEBサービス立ち上げ時に取り組んだ内容についてWEBエンジニア向けにまとめた記事です。例えばNginxの設定でHTTPヘッダーが正しく設定されているかを確認できるGoogleDevelopers PageSpeed Insights を知っていると大変有利です。もちろんPageSpeed Insightsを知らなくてもWEBサービスを公開・運用可能ですがユーザに意図せず不利益を与えていたり、知らず知らずのうちにモバイルフレンドリーでないとGoog...
+			</p>
+		</div>
+	</article>
+	
 	<section id="main-container">
-		<h1>みんなが取り組んでいる課題</h1>
+		<h1>この記事はこんな人たちの課題解決に役立ちました</h1>
 		<article class="box-item">
 			<section class="box-item-inner">
 				<div class="box-item-left">
@@ -207,7 +220,7 @@
 		</a>
 		<div class="user-info-log-area">
 			<h3>RailsでSNSを作りたい!</h3>
-			<a class="user-info-button-log" href="#">学習を記録する</a>
+			<a class="user-info-button-log" href="#">課題を設定する</a>
 		</div>
 	</div>
 </div>
