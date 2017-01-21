@@ -1,0 +1,8 @@
+$text-color: #696969;
+$base-color: #4A4A4A;
+
+@mixin box-default{
+  width: 960px;
+  margin: 0 auto 130px auto;
+  clear: both;
+}
