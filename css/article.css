@@ -1,0 +1,109 @@
+/* var base = 12;
+var to = 72;
+for (var i = 10; i<=to; i++) {
+	var p = Math.ceil(i/base*100);
+	console.log("$px"+i+":"+p+"%;");
+} */
+nav .box-inner {
+  margin: 0 auto;
+}
+nav .box-inner .nav-button-log {
+  display: block;
+  float: right;
+  width: 130px;
+  height: 32px;
+  margin: 14px 12px 0 0;
+  text-align: center;
+  text-decoration: none;
+  line-height: 32px;
+  outline: none;
+  background-color: #ff8c00;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+nav .box-inner .nav-button-log:hover {
+  background-color: #d2691e;
+}
+nav .box-inner .nav-button-log::before, nav .box-inner .nav-button-log::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+nav .box-inner .nav-button-log, nav .box-inner .nav-button-log::before, nav .box-inner .nav-button-log::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+nav .box-inner .user-gate {
+  float: right;
+}
+nav .box-inner .user-gate a {
+  line-height: 62px;
+  display: block;
+  padding: 0 15px;
+  float: left;
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+}
+nav .box-inner .user-gate a:hover {
+  background: #333;
+}
+
+#container #side-container .user-info-log-area .user-info-button-log {
+  display: block;
+  margin: 0 auto 40px auto;
+  width: 130px;
+  height: 32px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 32px;
+  outline: none;
+  background-color: #ff8c00;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#container #side-container .user-info-log-area .user-info-button-log:hover {
+  background-color: #d2691e;
+}
+#container #side-container .user-info-log-area .user-info-button-log::before, #container #side-container .user-info-log-area .user-info-button-log::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+#container #side-container .user-info-log-area .user-info-button-log, #container #side-container .user-info-log-area .user-info-button-log::before, #container #side-container .user-info-log-area .user-info-button-log::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.article {
+  width: 100%;
+}
+
+.teratail {
+  width: 100%;
+}

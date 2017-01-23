@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "compass";
+@import "partials/base";
+@import "partials/ptp-12";
+
+
+html, body{
+	height: 100%;
+}
+
+.qiita{
+	width: 1500px;
+	height: 4300px;
+	background: {
+		repeat: no-repeat;
+		position: top center;
+	}
+}
+
+.qiita-button{
+	position: absolute;
+	top: 370px;
+	left: 1050px;
+	font-size: 10px;
+	display: block;
+	margin: 0 auto 40px auto;
+	width: 120px;
+	height: 20px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 20px;
+	outline: none;
+	background-color: $base-color;
+	color: #fff;
+	@include border-radius(3px);
+	&:hover{background-color: #000}
+	&::before, &::after{
+		position: absolute;
+		z-index: -1;
+		display: block;
+		content: '';
+	}
+}
+.qiita-button, .qiita-button::before, .qiita-button::after{
+	@include box-sizing(border-box);
+	@include transition-property(all);
+	@include transition-duration(0.2s);
+}
+
+.qiita-index{
+	width:100%;
+}

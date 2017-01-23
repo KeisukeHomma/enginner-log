@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import "compass";
+@import "partials/base";
+@import "partials/ptp-12";
+
+nav{
+	.box-inner{
+		margin: 0 auto;
+		@include setting-log-button-nav;
+		.user-gate{
+			float: right;
+			a{
+				line-height: 62px;
+				display: block;
+				padding: 0 15px;
+				float: left;
+				color: #fff;
+				text-decoration: none;
+				width: 100px;
+				text-align: center;
+			}
+			a:hover{
+				background: #333;
+			}
+		}
+	}
+}
+
+#container{
+	#side-container{
+		.user-info-log-area{
+			@include setting-log-button-user-info;
+		}
+	}
+}
+
+.article{
+	width: 100%;
+}
+
+.teratail{
+	width:100%;
+}
