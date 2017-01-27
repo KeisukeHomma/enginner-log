@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*-----------------
+
+			ボタン
+
+------------------*/
 /* var base = 12;
 var to = 72;
 for (var i = 10; i<=to; i++) {
@@ -104,7 +109,10 @@ nav .box-inner .user-gate a:hover {
 /*-----------------
        追加
 -----------------*/
-h4 {
+a {
+  text-decoration: none;
+}
+a h4 {
   font-size: 117%;
   margin-bottom: 7px;
   color: #2e6eba;
@@ -113,9 +121,12 @@ h4 {
   line-height: 1.1;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 #container .contribution-article {
-  width: 980px;
-  height: 220px;
+  width: 100%;
   margin: 0 auto 40px auto;
   padding: 0;
   border: 1px solid #ccc;
@@ -124,13 +135,18 @@ h4 {
   border-radius: 5px;
   background: #F3F3F3;
   position: relative;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #container .contribution-article .contribution-article-img {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
   width: 240px;
-  height: 220px;
+  min-height: 220px;
+  height: 100%;
   float: left;
   margin: 0px 20px 0px 0px;
   border-right: solid 1px #ccc;
@@ -144,7 +160,7 @@ h4 {
 }
 #container .contribution-article .contribution-article-info .contribution-article-info-text {
   width: 700px;
-  height: 210px;
+  max-height: 180px;
   line-height: 1.5;
   font-size: 100%;
   font-feature-settings: normal;
@@ -184,7 +200,7 @@ h4 {
 }
 #side-container .contribution-show .contribution-show-button {
   display: block;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 30px auto;
   width: 130px;
   height: 32px;
   text-align: center;

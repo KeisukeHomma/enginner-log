@@ -55,25 +55,33 @@ nav{
 /*-----------------
        追加
 -----------------*/
-h4{
-	font-size: $px14;
-	margin-bottom: 7px;
-	color: $text-color-accent;
-	font-weight: 700;
-	word-wrap: break-word;
-	line-height: 1.1;
+a{
+	text-decoration: none;
+	h4{
+		font-size: $px14;
+		margin-bottom: 7px;
+		color: $text-color-accent;
+		font-weight: 700;
+		word-wrap: break-word;
+		line-height: 1.1;
+	}
 }
+a:hover{
+	text-decoration: underline;
+}
+
 
 #container{
 	.contribution-article{
-		width: 980px;
-		height: 220px;
+		width: 100%;
 		margin: 0 auto 40px auto;
 		padding: 0;
 		border: 1px solid #ccc;
 		@include border-radius(5px);
 		background: #F3F3F3;
 		position: relative;
+		overflow: hidden;
+		 @include box-sizing(border-box);
 		.contribution-article-img{
 			background: {
 				repeat: no-repeat;
@@ -81,7 +89,8 @@ h4{
 				size: cover;
 			}
 			width: 240px;
-			height: 220px;
+			min-height: 220px;
+			height: 100%;
 			float: left;
 			margin: 0px 20px 0px 0px;
 			border-right: solid 1px #ccc;
@@ -92,7 +101,7 @@ h4{
 			overflow: visible;
 			.contribution-article-info-text{
 				width: 700px;
-				height: 210px;
+				max-height: 180px;
 				line-height: 1.5;
 				font-size: $px12;
 				font-feature-settings: normal;

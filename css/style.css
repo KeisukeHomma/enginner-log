@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*-----------------
+
+			ボタン
+
+------------------*/
 /* var base = 12;
 var to = 72;
 for (var i = 10; i<=to; i++) {
@@ -68,7 +73,7 @@ html, body, main {
   height: 100%;
 }
 
-h1, h2, h3, h4, small {
+h1, h2, h3, h4, a, span, small, blockquote {
   color: #696969;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, 'メイリオ', Meiryo, sans-serif;
   font-feature-settings: "palt";
@@ -100,6 +105,11 @@ p {
   letter-spacing: 1px;
   color: #696969;
   font-size: 84%;
+}
+
+a {
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 /*--------------------
@@ -205,6 +215,8 @@ nav .box-inner #user-menu:hover {
 #container {
   width: 980px;
   margin: 0 auto;
+  padding-bottom: 40px;
+  overflow: hidden;
 }
 #container #main-container {
   width: 720px;

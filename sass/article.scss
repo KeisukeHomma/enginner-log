@@ -3,6 +3,25 @@
 @import "partials/base";
 @import "partials/ptp-12";
 
+h3{
+	word-wrap: break-word;
+	font-weight: 700;
+	line-height: 1.5;
+	font-size: $px11;
+}
+
+a{
+	h3:hover{
+		text-decoration: underline;
+	}
+	h5:hover{
+		text-decoration: underline;
+	}
+	.quote-title:hover{
+		text-decoration: underline;
+	}
+}
+
 nav{
 	.box-inner{
 		margin: 0 auto;
@@ -26,10 +45,277 @@ nav{
 	}
 }
 
+article{
+	.article-header{
+		background: $main-color;
+		padding: 50px 0;
+		margin-bottom: 30px;
+		overflow: hidden;
+		.article-header-inner{
+			@include box-default;
+			.article-header-left{
+				width: 720px;
+				float: left;
+				.article-header-title{
+					color: #fff;
+					margin-bottom: 10px;
+					font-size: $px24;
+					span{
+						background: #fff;
+						color: $text-color-accent;
+						margin: 0 8px 0 5px;
+						padding: 3px 4px 3px 6px;
+						position: relative;
+						top: -5px;
+						font-size: 12px;
+						@include border-radius(4px);
+						vertical-align: middle;
+					}
+				}
+				.article-header-tag{
+					p{
+						font-size: 10px;
+						float: left;
+						background: #DEDEDE;
+						color: #797979;
+						margin: 0 8px 0 0;
+						padding: 0 5px;
+						height: 15px;
+						line-height: 15px;
+						display: block;
+						@include border-radius(3px);
+					}
+				}
+			}
+			.article-header-right{
+				width: 240px;
+				float: right;
+				.article-header-count-area{
+					width: 100%;
+					color: #fff;
+					overflow: hidden;
+					margin-bottom: 10px;
+					.article-header-count{
+						width: 50%;
+						float: left;
+						text-align: center;
+						border-right: 1px solid #1A67C1;
+						@include box-sizing(border-box);
+						&:last-child{
+							border-right: none;
+						}
+						span{
+							color: #fff;
+						}
+						.article-header-count-section{
+							fa{
+								font-size: 10px;
+							}
+							.article-header-count-num{
+								font-size: $px12;
+							}
+						}
+						.article-header-count-text{
+							font-size: 10px;
+							font-weight: 400;
+						}
+					}
+				}
+
+				.article-header-good-button{
+					clear: both;
+					display: block;
+					width: 100%;
+					height: 32px;
+					line-height: 32px;
+					color: $main-color;
+					background: #fff;
+					text-align: center;
+					font-weight: 700;
+					@include border-radius(2px);
+					@include transition-property(all);
+					@include transition-duration(0.2s);
+					&:hover{
+						background: $text-color-accent;
+						color: #ddd;
+					}
+				}
+			}
+		}
+	}
+}
+
 #container{
+	#main-container{
+		h2{
+			color: $base-color;
+			font-size: $px16;
+			line-height: 28px;
+			border-bottom: 2px solid #ccc;
+			margin: 80px 0 8px 0;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+		h3{
+			text-align: left;
+			font-size: $px12;
+			border-bottom: 1px solid #ccc;
+			margin: 50px 0 6px 0;
+			width: 100%;
+		}
+		p{
+			font-size: $px12;
+			margin-bottom: 10px;
+		}
+		blockquote{
+			background: $back-color;
+			border: 1px solid #ccc;
+			width: 680px;
+			margin: 15px auto 10px auto;
+			@include border-radius(3px);
+			overflow: hidden;
+			padding: 10px 10px;
+			.quote-img{
+				@include border-radius(3px);
+				width: 100px;
+				height: 100px;
+				float: left;
+				background: {
+					repeat: no-repeat;
+					position: top center;
+					size: cover;
+				}
+			}
+			.quote-title{
+				float: right;
+				width: 570px;
+				color: $text-color-accent;
+				line-height: 20px;
+				font-weight: 700;
+				margin-bottom: 5px;
+			}
+			.quote-sentence{
+				width: 570px;
+				float: right;
+				margin: 0;
+			}
+		}
+		
+		//テラテイルの質問・回答エリア
+		.teratail{
+			background: $back-color;
+			border: 1px solid #ccc;
+			width: 680px;
+			margin: 15px auto 10px auto;
+			@include border-radius(3px);
+			padding: 10px 10px 10px 15px;
+			.teratail-question{
+				overflow: hidden;
+				.teratail-question-mark{
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					float: left;
+					font-size: $px18;
+					font-weight: 700;
+					background: $main-color;
+					color: #fff;
+					@include border-radius(50%);
+					text-align: center;
+					
+				}
+				.teratail-question-title{
+					float: right;
+					width: 620px;
+					color: $text-color-accent;
+					line-height: 20px;
+					font-weight: 700;
+					margin: 10px 0 5px 0;
+				}
+				.teratail-question-sentence{
+					width: 100%;
+					float: right;
+					margin: 10px 0 0 0;
+				}
+			}
+		}
+	}
+
+
+
 	#side-container{
-		.user-info-log-area{
-			@include setting-log-button-user-info;
+		border: none;
+		.user-leader-info{
+			@include side-box;
+			padding-bottom: 10px;
+			.user-leader-info-title{
+			}
+			.user-leader-info-avatar{
+				width: 50px;
+				height: 50px;
+				@include border-radius(50%);
+				margin: 0 auto 10px auto;
+				background: {
+					repeat: no-repeat;
+					position: top center;
+					size: cover;
+				}
+			}
+			.user-leader-info-name{
+				text-align: center;
+				display: block;
+				margin-left: 5px;
+				font-size: $px10;
+				margin-bottom: 20px;
+			}
+			.user-leader-info-text{
+				width: 200px;
+				margin: 0 auto;
+				padding: 10px;
+				background: $back-color;
+				position: relative;
+				@include border-radius(3px);
+				&:after {
+					content: "";
+					position: absolute;
+					top: -6px; left: 50%;
+					margin-left: -6px;
+					display: block;
+					width: 0px;
+					height: 0px;
+					border-style: solid;
+					border-width: 0 6px 6px 6px;
+					border-color: transparent transparent $back-color transparent;
+				}
+			}
+		}
+		.contribution-show{
+			@include side-box;
+			@include border-radius(5px);
+			padding-bottom: 0;
+			.contribution-article-url-box{
+				margin: 0 auto 20px auto;
+				padding: 2px 5px;
+				display: block;
+				width: 180px;
+				height: 20px;
+				clear: both;
+				border: 1px solid #ccc;
+				color: $base-color;
+				@include border-radius(3px);
+			}
+			input:focus {
+				border:solid 1px $main-color;
+			}
+			h3{
+				font-size: $px11;
+				padding: 0px 5px 0 5px;
+				word-wrap: break-word;
+				font-weight: 700;
+				line-height: 1.5;
+			}
+			@include contribution-show-button;
 		}
 	}
 }
