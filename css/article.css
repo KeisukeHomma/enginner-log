@@ -26,6 +26,9 @@ a h5:hover {
 a .quote-title:hover {
   text-decoration: underline;
 }
+a .teratail-question-title:hover {
+  text-decoration: underline;
+}
 
 nav .box-inner {
   margin: 0 auto;
@@ -89,12 +92,12 @@ article .article-header {
   background: #4A92E6;
   padding: 50px 0;
   margin-bottom: 30px;
-  overflow: hidden;
 }
 article .article-header .article-header-inner {
   width: 980px;
   margin: 0 auto 0 auto;
   clear: both;
+  overflow: hidden;
 }
 article .article-header .article-header-inner .article-header-left {
   width: 720px;
@@ -102,7 +105,7 @@ article .article-header .article-header-inner .article-header-left {
 }
 article .article-header .article-header-inner .article-header-left .article-header-title {
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 200%;
 }
 article .article-header .article-header-inner .article-header-left .article-header-title span {
@@ -288,7 +291,36 @@ article .article-header .article-header-inner .article-header-right .article-hea
 #container #main-container .teratail .teratail-question .teratail-question-sentence {
   width: 100%;
   float: right;
-  margin: 10px 0 0 0;
+  margin: 4px 0 0 0;
+}
+#container #main-container .teratail .answer-input-box {
+  margin: 10px auto 0 auto;
+  padding: 2px 5px;
+  display: block;
+  width: 660px;
+  height: 60px;
+  clear: both;
+  border: 1px solid #ccc;
+  color: #4A4A4A;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#container #main-container .teratail input:focus {
+  border: solid 1px #4A92E6;
+}
+#container #main-container .teratail .answer-button {
+  display: block;
+  margin: 10px auto 10px auto;
+  line-height: 28px;
+  height: 28px;
+  width: 100px;
+  color: #fff;
+  text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #df5656;
 }
 #container #side-container {
   border: none;
@@ -331,6 +363,7 @@ article .article-header .article-header-inner .article-header-right .article-hea
   padding: 10px;
   background: #F4F4F4;
   position: relative;
+  font-size: 10px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;

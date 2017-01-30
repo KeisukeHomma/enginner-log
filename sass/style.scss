@@ -127,21 +127,25 @@ nav{
 		//記事
 		.box-item{
 			width: 100%;
-			height: 108px;
 			clear: both;
 			border-top: solid 1px #ccc;
 			.box-item-inner{
-				padding: 11px 5px 8px 10px;
-				height: inherit;
+				padding: 10px 5px 10px 10px;
+				overflow: hidden;
+				position: relative;
 				.box-item-left{
 					float: left;
 					width: 46px;
+					height: 60px;
+					position: absolute;
+					display: block;
+					top: 0;
+					bottom: 0;
+					margin: auto;
 					.box-item-icon{
 						width: 100%;
 						height: 46px;
 						@include border-radius(50%);
-						margin-top: 15px;
-						margin-bottom: 4px;
 						background: {
 							repeat: no-repeat;
 							position: top center;
@@ -162,17 +166,6 @@ nav{
 						height: 18px;
 						word-wrap: break-word;
 						margin-bottom: 7px;
-//						.box-item-state{
-//							float: left;
-//							background: #0057D6;
-//							color: #fff;
-//							margin: 0 8px 0 0;
-//							padding: 3px 4px 3px 6px;
-//							position: relative;
-//							top: -2px;
-//							font-size: 10px;
-//							@include border-radius(4px);
-//						}
 						h2{
 							float: left;
 							span{
@@ -196,8 +189,8 @@ nav{
 						overflow: hidden;
 						font-size: 12px;
 						clear: both;
-						margin-bottom: 10px;
-						height: 32px;
+						margin-bottom: 8px;
+						max-height: 32px;
 					}
 					.box-item-info{
 						width: 100%;
@@ -237,41 +230,72 @@ nav{
 	#side-container{
 		width: 240px;
 		float: right;
-		border: solid 1px #ccc;
-		@include border-radius(5px);
-		a{
-			text-decoration: none;
-		}
-		.user-info-avatar{
-			width: 108px;
-			height: 108px;
-			margin: 40px auto 10px auto;
-			background: {
-				repeat: no-repeat;
-				position: top center;
-				size: cover;
+		.user-area{
+			margin-bottom: 20px;
+			@include border-radius(5px);
+			border: 1px solid #ccc;
+			a{
+				text-decoration: none;
 			}
-			@include border-radius(50%);
+			.user-info-avatar{
+				width: 108px;
+				height: 108px;
+				margin: 40px auto 10px auto;
+				background: {
+					repeat: no-repeat;
+					position: top center;
+					size: cover;
+				}
+				@include border-radius(50%);
+			}
+			.user-info-name{
+				font-size: $px14;
+				color: $base-color;
+				letter-spacing: 1px;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.user-info-log-area{
+				width: 100%;
+				border-top: solid 1px #ccc;
+				clear: both;
+				padding-top: 30px;
+				h3{
+					font-size: $px12;
+					padding: 0 10px;
+					word-wrap: break-word;
+					font-weight: 700;
+				}
+				@include log-button-user-info;
+			}
 		}
-		.user-info-name{
-			font-size: $px14;
-			color: $base-color;
-			letter-spacing: 1px;
-			text-align: center;
-			margin-bottom: 30px;
-		}
-		.user-info-log-area{
-			width: 100%;
-			border-top: solid 1px #ccc;
-			clear: both;
-			padding-top: 30px;
+		
+		.contribution-show{
+			@include side-box;
+			@include border-radius(5px);
+			padding-bottom: 0;
+			.contribution-article-url-box{
+				margin: 0 auto 20px auto;
+				padding: 2px 5px;
+				display: block;
+				width: 180px;
+				height: 20px;
+				clear: both;
+				border: 1px solid #ccc;
+				color: $base-color;
+				@include border-radius(3px);
+			}
+			input:focus {
+				border:solid 1px $main-color;
+			}
 			h3{
-				font-size: $px12;
-				padding: 0 10px;
+				font-size: $px11;
+				padding: 0px 5px 0 5px;
 				word-wrap: break-word;
 				font-weight: 700;
+				line-height: 1.5;
 			}
-			@include log-button-user-info;
+			@include contribution-show-button;
 		}
 	}
 }

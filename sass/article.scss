@@ -20,6 +20,9 @@ a{
 	.quote-title:hover{
 		text-decoration: underline;
 	}
+	.teratail-question-title:hover{
+		text-decoration: underline;
+	}
 }
 
 nav{
@@ -50,15 +53,15 @@ article{
 		background: $main-color;
 		padding: 50px 0;
 		margin-bottom: 30px;
-		overflow: hidden;
 		.article-header-inner{
 			@include box-default;
+			overflow: hidden;
 			.article-header-left{
 				width: 720px;
 				float: left;
 				.article-header-title{
 					color: #fff;
-					margin-bottom: 10px;
+					margin-bottom: 20px;
 					font-size: $px24;
 					span{
 						background: #fff;
@@ -236,8 +239,33 @@ article{
 				.teratail-question-sentence{
 					width: 100%;
 					float: right;
-					margin: 10px 0 0 0;
+					margin: 4px 0 0 0;
 				}
+			}
+			.answer-input-box{
+				margin: 10px auto 0 auto;
+				padding: 2px 5px;
+				display: block;
+				width: 660px;
+				height: 60px;
+				clear: both;
+				border: 1px solid #ccc;
+				color: $base-color;
+				@include border-radius(3px);
+			}
+			input:focus {
+				border:solid 1px $main-color;
+			}
+			.answer-button{
+				display: block;
+				margin: 10px auto 10px auto;
+				line-height: 28px;
+				height: 28px;
+				width: 100px;
+				color: #fff;
+				text-align: center;
+				@include border-radius(3px);
+				background: rgb(223, 86, 86);
 			}
 		}
 	}
@@ -275,6 +303,7 @@ article{
 				padding: 10px;
 				background: $back-color;
 				position: relative;
+				font-size: 10px;
 				@include border-radius(3px);
 				&:after {
 					content: "";

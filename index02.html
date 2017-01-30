@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Engineer Log</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/contribution.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 <script src="https://use.fontawesome.com/4f28f6d2c2.js"></script>
 </head>
@@ -13,40 +12,25 @@
 
 <nav>
 	<div class="box-inner">
-		<a href="index.html">
+		<a href="index02.html">
 			<div class="logo">
 				<img src="images/logo.png" alt="エンジニアログのロゴ" />
 			</div>
 		</a>
-		<div class="user-gate">
-			<a href="signin.html">
-				<i class="fa fa-sign-in" aria-hidden="true"></i>
-				ログイン
-			</a>
-			<a href="signup.html">
-				<i class="fa fa-user-plus" aria-hidden="true"></i>
-				新規登録
-			</a>
-		</div>
+		<a href="mypage.html">
+			<div id="user-menu">
+				<div id="user-menu-img" style="background-image: url(images/people/pro.jpg);"></div>
+				<p id="user-menu-name">ベテラン</p>
+				<div id="triangle"></div>
+			</div>
+		</a>
+		<a class="nav-button-log" href="#">学習を記録する</a>
 	</div>
 </nav>
 
 <div id="container">
-	<article class="contribution-article">
-		<div class="contribution-article-img" style="background-image: url(images/article/05.png)"></div>
-		<div class="contribution-article-info">
-			<a href="http://qiita.com/hirokidaichi/items/d30714f0698dcff1200f">
-				<h4>新人プログラマに正月休み中を使って読んでみてほしい技術書をセレクトしてみた。 - Qiita</h4>
-			</a>
-			<p class="contribution-article-info-text">
-				今年、書いた幾つかの記事のタネ本であったり、新卒教育の際に参考書籍としてあげたものを中心にリストアップします。一応amazonへのリンクも貼っておきますが、先輩が持ってたりすると思うので、冬休みに借りて一気に読んでおくのもいいかと思います。
-				その時々、必要な技術の習得に日々追われているんじゃないかと思いますが、いつまでも使える知識・基礎的な体力としての考え方などを手に入れることで、着実なレベルアップができるようなものを選んでみました...
-			</p>
-		</div>
-	</article>
-	
 	<section id="main-container">
-		<h1>この記事はこんな人たちの課題解決に役立ちました</h1>
+		<h1>みんなが取り組んでいる課題</h1>
 		<article class="box-item">
 			<section class="box-item-inner">
 				<div class="box-item-left">
@@ -57,9 +41,7 @@
 				</div>
 				<div class="box-item-right">
 					<div class="box-item-title">
-						<a href="article01.html">
-							<h2><span>継続中</span>Android向け健康アプリを作る</h2>
-						</a>
+						<h2><span>継続中</span>Android向け健康アプリを作る</h2>
 					</div>
 					<p class="box-item-text">
 						Android Studioの環境構築からやって行こうと思います。同じ目的を持つ人は一緒に取り組んでいきましょう。初心者なのでわからないことも多いとは思いますが、頑張って作るので宜しくお願いします！
@@ -91,9 +73,7 @@
 				</div>
 				<div class="box-item-right">
 					<div class="box-item-title">
-						<a href="article01.html">
-							<h2><span>継続中</span>Raspberry Pi 2を始めてみる。</h2>
-						</a>
+						<h2><span>継続中</span>Raspberry Pi 2を始めてみる。</h2>
 					</div>
 					<p class="box-item-text">
 						ずっと気になっていたラズパイに初めて触ってみたいと思います。Javaを使って動かしていきます。
@@ -128,9 +108,7 @@
 				</div>
 				<div class="box-item-right">
 					<div class="box-item-title">
-						<a href="article01.html">
-							<h2><span>継続中</span>RailsでSNSを作る！</h2>
-						</a>
+						<h2><span>継続中</span>RailsでSNSを作る！</h2>
 					</div>
 					<p class="box-item-text">
 						Railsの勉強を兼ねて簡単なSNSを作っていこうと思います。Rubyのバージョンは2.3.0で、Railsのバージョンは4.2.6です。
@@ -162,9 +140,7 @@
 				</div>
 				<div class="box-item-right">
 					<div class="box-item-title">
-						<a href="article01.html">
-							<h2><span>継続中</span>Processingを使ってプログラミング！</h2>
-						</a>
+						<h2><span>継続中</span>Processingを使ってプログラミング！</h2>
 					</div>
 					<p class="box-item-text">
 						プログラミングによるビジュアル・インタラクティブ表現の入門に最も適した開発環境 Processing（プロセッシング）の学習記録をしていきます。
@@ -196,9 +172,7 @@
 				</div>
 				<div class="box-item-right">
 					<div class="box-item-title">
-						<a href="article01.html">
-							<h2><span>継続中</span>RailsでSNSを作る！</h2>
-						</a>
+						<h2><span>継続中</span>RailsでSNSを作る！</h2>
 					</div>
 					<p class="box-item-text">
 						Railsの勉強を兼ねて簡単なSNSを作っていこうと思います。Rubyのバージョンは2.3.0で、Railsのバージョンは4.2.6です。
@@ -227,13 +201,23 @@
 	
 	<!-- プロフィール等 -->
 	<div id="side-container">
-		<div class="contribution-show">
-			<h3>自分の記事が誰に役立ったか<br>調べてみましょう</h3>
-			<form>
-				<input type="url" class="contribution-article-url-box" autocomplete="name" placeholder="あなたの記事のURL"/>
-			</form>
-			<a class="contribution-show-button" href="#">調べてみる</a>
+		<div class="user-area">
+			<a href="mypage.html">
+				<div class="user-info-avatar" style="background-image: url(images/people/pro.jpg)"></div>
+				<p class="user-info-name">ベテラン</p>
+			</a>
+			<div class="user-info-log-area">
+				<h3>RailsでSNSを作りたい!</h3>
+				<a class="user-info-button-log" href="#">学習を記録する</a>
+			</div>
 		</div>
+		<div class="contribution-show">
+				<h3>自分の記事が誰に役立ったか<br>調べてみましょう</h3>
+				<form>
+					<input type="url" class="contribution-article-url-box" autocomplete="name" placeholder="あなたの記事のURL"/>
+				</form>
+				<a class="contribution-show-button" href="contribution02.html">調べてみる</a>
+			</div>
 	</div>
 </div>
 

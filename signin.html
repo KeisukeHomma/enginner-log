@@ -2,16 +2,45 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Engineer Log マイページ</title>
+<title>Engineer Log - ログイン</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/sign.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 <script src="https://use.fontawesome.com/4f28f6d2c2.js"></script>
 </head>
 
 <body>
 
-<h2>マイページ</h2>
+<nav>
+	<div class="box-inner">
+		<a href="index.html">
+			<div class="logo">
+				<img src="images/logo.png" alt="エンジニアログのロゴ" />
+			</div>
+		</a>
+		<div class="user-gate">
+			<a href="signin.html">
+				<i class="fa fa-sign-in" aria-hidden="true"></i>
+				ログイン
+			</a>
+			<a href="signup.html">
+				<i class="fa fa-user-plus" aria-hidden="true"></i>
+				新規登録
+			</a>
+		</div>
+	</div>
+</nav>
 
+<div id="container">
+	<h1>マイページ</h1>
+
+	<form>
+		<input type="url" class="e-mail" autocomplete="name" placeholder="メールアドレス"/>
+		<input type="url" class="e-mail" autocomplete="name" placeholder="パスワード"/>
+	</form>
+	<a class="contribution-show-button" href="index02.html">ログイン</a>
+
+</div>
 
 </body>
 </html>

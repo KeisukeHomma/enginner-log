@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import "compass";
+@import "partials/base";
+@import "partials/ptp-12";
+
+nav{
+	.box-inner{
+		@include setting-log-button-nav;
+		.user-gate{
+			float: right;
+			a{
+				line-height: 62px;
+				display: block;
+				padding: 0 15px;
+				float: left;
+				color: #fff;
+				text-decoration: none;
+				width: 100px;
+				text-align: center;
+			}
+			a:hover{
+				background: #333;
+			}
+		}
+	}
+}
+
+input{
+	padding: 4px 5px;
+	display: block;
+	width: 280px;
+	height: 24px;
+	margin: 0 auto 10px auto;
+	clear: both;
+	color: $base-color;
+	font-size: $px12;
+	border: 1px solid #ccc;
+	@include border-radius(3px);
+}
+input:focus {
+	border:solid 1px $main-color;
+}
+
+.contribution-show-button{
+		display: block;
+		margin: 20px auto 30px auto;
+		width: 130px;
+		height: 32px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 32px;
+		outline: none;
+		background-color: $main-color;
+		color: #fff;
+		@include border-radius(3px);
+		&:hover{background-color: $text-color-accent}
+		&::before, &::after{
+			position: absolute;
+			z-index: -1;
+			display: block;
+			content: '';
+		}
+	}
+	.contribution-show-button, .contribution-show-button::before, .contribution-show-button::after{
+		@include box-sizing(border-box);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
